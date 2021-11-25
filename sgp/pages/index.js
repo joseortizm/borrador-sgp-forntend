@@ -45,16 +45,19 @@ const handleSubmit =async (e) => {
 
       var json = jwt.decode(token);
       //const body = JSON.parse(json); //no funciona
-      console.log(json); //guardar 
+
+      //console.log(json); //guardar 
 
       localStorage.setItem("userData",JSON.stringify(json)) ////
       //parsear el json
-      console.log(JSON.parse(localStorage.getItem("userData")));
+      
+
+      //console.log(JSON.parse(localStorage.getItem("userData")));
 
 
 
-      //router.push('/inicio');
-      setMessage("Bienvenido " + json.id +" que naciste "+json.years+" gracias!");
+      router.push('/inicio');
+      //setMessage("Bienvenido " + json.id +" que naciste "+json.years+" gracias!");
       
 
     }else{
